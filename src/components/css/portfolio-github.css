@@ -1,0 +1,121 @@
+.portfolio-github{
+    height: 10%;
+    padding-right: 1rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    -o-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+
+    .logo-container{
+        a{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            gap: 8px;
+
+            color: white;
+            text-decoration: none;
+
+            i{
+                color: var(--color-3);
+                border-radius: 50%;
+
+                transition: all ease 250ms;
+                -webkit-transition: all ease 250ms;
+                -moz-transition: all ease 250ms;
+                -o-transition: all ease 250ms;
+            }
+
+            p{
+                width: 0;
+                height: 25px;
+
+                overflow: hidden;
+                opacity: 0%;
+
+                transition: all ease-in-out 250ms;
+                -webkit-transition: all ease-in-out 250ms;
+                -o-transition: all ease-in-out 250ms;
+                -moz-transition: all ease-in-out 250ms;
+            }
+        }
+
+        a:hover{
+            i{
+                background-color: var(--color-1);
+                box-shadow: 0px 0px 5px 4px var(--color-1);
+
+                animation: 1s ease spin;
+                -webkit-animation: 1s ease spin;
+                -moz-animation: 1s ease spin;
+                -o-animation: 1s ease spin;
+            }
+
+            p{
+                width: 100%;
+                opacity: 100%;
+                color: var(--color-3);
+            }
+        }
+    }
+}
+
+.portfolio-github.animated{
+    animation: 1s ease slide-in-right;
+    -webkit-animation: 1s ease slide-in-right;
+    -o-animation: 1s ease slide-in-right;
+    -moz-animation: 1s ease slide-in-right;
+
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+}
+
+@keyframes slide-in-right{
+    from{
+        transform: translateX(200%);
+        -webkit-transform: translateX(200%);
+        -o-transform: translateX(200%);
+        -moz-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+        -webkit-transition: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        -webkit-transition: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+    }
+}

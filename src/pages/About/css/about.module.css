@@ -1,0 +1,25 @@
+.section_container{
+    width: 100%;
+    padding-bottom: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-content: start;
+
+    .section_content_container{
+        width: 100%;
+        height: 80%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-content: start;
+
+        gap: 2.5rem;
+
+        position: relative;
+    }
+}

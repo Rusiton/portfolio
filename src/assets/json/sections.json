@@ -1,0 +1,133 @@
+{
+    "introduction": {
+        "en": {
+            "title": "Welcome, my name is Santiago",
+            "subtitle": "And I am a Fullstack Web Developer",
+            "visitSocialMedia": "Visit my social media!",
+            "seeCurriculum": "SEE CURRICULUM"
+        },
+
+        "es": {
+            "title": "Bienvenid@, me llamo Santiago",
+            "subtitle": "Y soy un Desarrollador Web FullStack",
+            "visitSocialMedia": "Visita mis redes sociales!",
+            "seeCurriculum": "VER CURRICULUM"
+        }
+    },
+
+    "about": {
+        "en": {
+            "title": "About me",
+            "about": "I'm a Full Stack Web Developer, I have knowledge in diverse languajes. Specialized in PHP, JavaScript, MySQL, HTML & CSS, as well as in libraries and frameworks like React and Express JS. I am able to guarantee trust in such areas like both Back and Front End, Database and Methodologies, as well as a good work developement.",
+            "knowledge": {
+                "title": "Knowledge",
+                "other": "OTHER"
+            },
+            "workexp": {
+                "title": "Work Experience",
+                "workedAsEvaP": "Worked as an ",
+                "itInternEvaP": "IT Intern ",
+                "atEvaP": "at ",
+                "evadb": "Took part in 'Eva DB Hospital Manager' proyect developement, for his thesis presentation"
+            },
+            "education": {
+                "title": "Education",
+                "pastEd": "Finished Education",
+                "degreeIn": "Degree in ",
+                "degree": "Professional and Personal IT Technician",
+                "robArlt": "Secondary Technical School N°3 'Roberto Arlt'",
+                "privCourse": "Private course in ",
+                "english": "English",
+                "engInstitute": "'The Bridge' Institution",
+                "engLevel": "B2 Level",
+                "currentEd": "Current Education",
+                "studIn": "Student in ",
+                "compEng": "Computer Engineering",
+                "uba": "Buenos Aires University"
+            }
+        },
+
+        "es": {
+            "title": "Sobre mi",
+            "about": "Soy un Desarrollador Web Full Stack, tengo conocimientos en diversos lenguajes. Especializado en PHP, JavaScript, MySQL, HTML y CSS, así como en librerías y frameworks como React y Express JS. Soy capaz de garantizar confianza en áreas como Back y Front End, Bases de Datos y Metodologías, así como un buen desarrollo de mi trabajo.",
+            "knowledge": {
+                "title": "Conocimiento",
+                "other": "OTROS"
+            },
+            "workexp": {
+                "title": "Experiencia Laboral",
+                "workedAsEvaP": "Trabajó como ",
+                "itInternEvaP": "Técnico Interno ",
+                "atEvaP": "en ",
+                "evadb": "Formó parte del desarrollo del proyecto 'Eva DB Hospital Manager', para la presentación de su tesis"
+            },
+            "education": {
+                "title": "Educación",
+                "pastEd": "Educación Completa",
+                "degreeIn": "Título de ",
+                "degree": "Técnico en Informática Profesional y Personal",
+                "robArlt": "Escuela Secundaria Técnica N°3 'Roberto Arlt'",
+                "privCourse": "Curso privado en ",
+                "english": "Inglés",
+                "engInstitute": "Instituto 'The Bridge'",
+                "engLevel": "Nivel B2",
+                "currentEd": "Educación Actual",
+                "studIn": "Estudiante de ",
+                "compEng": "Ingeniería en Informática",
+                "uba": "Universidad de Buenos Aires"
+            }
+        }
+    },
+
+    "projects": {
+        "en": {
+            "title": "My Work",
+            "description": "Have a look at the projects I've worked on in the past.",
+            "all_projects": [
+                {
+                    "image_url": "eva-db.png",
+                    "title": "EVA DB HOSPITAL MANAGER",
+                    "description": "CRUD Web Application, made to own digital control over a patient's entry, therapy and departure inside a hospital. Made for the 'Hospital Interzonal General de Agudos Eva Peron' medical staff.",
+                    "roles": "Backend Dev, Frontend Dev, Database Dev",
+                    "tools": "HTML, CSS, PHP, JavaScript, MySQL"
+                },
+                {
+                    "image_url": "portfolio.png",
+                    "title": "Santigs Portfolio",
+                    "description": "Galasso Santiago's personal web portfolio.",
+                    "roles": "Everything",
+                    "tools": "HTML, CSS, React JS, Git"
+                }
+            ]
+        },
+        "es": {
+            "title": "Mis Proyectos",
+            "description": "Echa un vistazo a los proyectos en los que he trabajado previamente.",
+            "all_projects": [
+                {
+                    "image_url": "eva-db.png",
+                    "title": "EVA DB HOSPITAL MANAGER",
+                    "description": "Aplicación Web CRUD, hecha para poseer control digital de la entrada, el tratamiento y la dada de alta de un paciente dentro de un hospital. Creada para el personal médico del Hospital Interzonal General de Agudos Eva Perón.",
+                    "roles": "Backend Dev, Frontend Dev, Database Dev",
+                    "tools": "HTML, CSS, PHP, JavaScript, MySQL"
+                },
+                {
+                    "image_url": "portfolio.png",
+                    "title": "Santigs Portfolio",
+                    "description": "Porfolio web personal de Santiago Galasso.",
+                    "roles": "Todo",
+                    "tools": "HTML, CSS, React JS, Git"
+                }
+            ]
+        }
+    },
+
+    "contact": {
+        "en": {
+            "title": "Get in touch"
+        },
+        "es": {
+            "title": "Contáctame"
+        }
+    }
+}

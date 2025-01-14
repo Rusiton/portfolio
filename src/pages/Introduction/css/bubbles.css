@@ -1,0 +1,8 @@
+.bubbles-container{
+    width: 100%;
+    display: flex;
+
+    position: relative;
+
+    z-index: 0;
+}

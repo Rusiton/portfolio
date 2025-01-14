@@ -1,0 +1,61 @@
+.swiper-container{
+    width: 150%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    right: -150%;
+
+    z-index: 10;
+
+    .swiper{
+        height: 100%;
+
+        position: relative;
+        display: flex;
+        
+
+        .middle-box{
+            width: 60%;
+            height: 100%;
+
+            background-color: var(--color-1);
+
+            transform: translateX(-2px);
+            -webkit-transform: translateX(-2px);
+            -o-transform: translateX(-2px);
+            -moz-transform: translateX(-2px);
+        }
+
+        .right-wave{
+            transform: translateX(3px);
+            -webkit-transform: translateX(3px);
+            -o-transform: translateX(3px);
+            -moz-transform: translateX(3px);
+
+            rotate: 180deg;
+        }
+    }
+}
+
+.swiper-container.swipe{
+    animation: 900ms ease-in-out swipe-left;
+    -webkit-animation: 900ms ease-in-out swipe-left;
+    -o-animation: 900ms ease-in-out swipe-left;
+    -moz-animation: 900ms ease-in-out swipe-left;
+}
+
+@keyframes swipe-left {
+    from{
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-160%);
+        -webkit-transform: translateX(-160%);
+        -o-transform: translateX(-160%);
+        -moz-transform: translateX(-160%);
+    }
+}

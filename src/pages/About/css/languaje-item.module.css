@@ -1,0 +1,34 @@
+.section_knowledge_col_item{
+    height: 40px;
+    padding: 4px;
+
+    border-radius: 4px;
+
+    background-color: var(--color-6);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    opacity: 0%;
+
+    img{
+        width: 32px;
+    }
+
+    .section_knowledge_col_item_label{
+        margin: 4px 0;
+        color: var(--color-3);
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.section_knowledge_col_item.visible{
+    transition: all ease 1s;
+    opacity: 100%;
+}
+
+.section_knowledge_col_item.fastLoaded{
+    opacity: 100%;
+}
