@@ -1,4 +1,4 @@
-import styles from '../../css/introduction.module.css';
+import styles from './css/introduction.module.css';
 
 import Bubbles from './Bubbles';
 import Title from './Title';
@@ -10,8 +10,6 @@ function Content({dictionary, animationClass}){
         <div className={styles.section_content_container}>
             <Bubbles />
             <Title dictionary={dictionary} animationClass={animationClass} />
-            {/* <SocialMedia dictionary={dictionary} animationClass={animationClass} />
-            <Curriculum dictionary={dictionary} animationClass={animationClass} /> */}
         </div>
     );
 }

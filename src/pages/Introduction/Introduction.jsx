@@ -2,7 +2,7 @@ import { Context } from '../../App';
 import { useContext } from 'react';
 
 import { introduction } from '../../assets/json/sections.json';
-import styles from '../../css/introduction.module.css';
+import styles from './css/introduction.module.css';
 
 import Content from './Content';
 

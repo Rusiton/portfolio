@@ -3,6 +3,7 @@ import { useState, createContext } from "react";
 import AppearanceControl from "./components/ui/AppearanceControl";
 import PortfolioGithub from "./components/ui/PortfolioGithub";
 import Header from "./components/ui/Header";
+import LeftSideMenu from "./components/ui/LeftSideMenu";
 import Content from "./components/ui/Content";
 import Swiper from "./components/ui/Swiper";
 
@@ -75,6 +76,7 @@ function App(){
                 <AppearanceControl onLanguajeChange={updateLanguaje} onThemeChange={updateTheme} />
                 <PortfolioGithub />
                 <Header onSectionChange={updateSection} />
+                <LeftSideMenu />
                 <Content />
                 <Swiper />
             </div>

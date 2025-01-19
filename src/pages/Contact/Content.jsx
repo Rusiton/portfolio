@@ -7,7 +7,7 @@ function Content({dictionary}){
     return(
         <div className={styles.section_content_container}>
             <Title title={dictionary.title} section={"Contact"} />
-            <Form />
+            <Form dictionary={dictionary} />
         </div>
     );
 }

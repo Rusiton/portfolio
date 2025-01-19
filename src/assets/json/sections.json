@@ -124,10 +124,24 @@
 
     "contact": {
         "en": {
-            "title": "Get in touch"
+            "title": "Get in touch",
+            "left_text_1": "If you'd like to get in contact and work with me, you can opt for sending a direct e-mail to the next address:",
+            "left_text_2": "I'll reply as soon as possible.",
+            "right_side_title": "Or you can fill this form",
+            "your_name": "Your name",
+            "your_email": "Your e-mail",
+            "your_message": "Your message (Max of 1000 characters)",
+            "send": "Send"
         },
         "es": {
-            "title": "Contáctame"
+            "title": "Contáctame",
+            "left_text_1": "Si quieres ponerte en contacto y trabajar conmigo, puedes optar por enviarme un e-mail directo al siguiente correo:",
+            "left_text_2": "Contestaré lo mas pronto posible.",
+            "right_side_title": "O puedes completar este formulario",
+            "your_name": "Tu nombre",
+            "your_email": "Tu correo",
+            "your_message": "Tu mensaje (1000 caracteres max.)",
+            "send": "Enviar"
         }
     }
 }

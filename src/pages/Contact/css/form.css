@@ -5,6 +5,8 @@
     border: 1px solid var(--color-4);
     border-radius: 4px;
 
+    background-color: var(--color-5);
+
     display: flex;
     flex-wrap: wrap;
 
@@ -62,5 +64,90 @@
             justify-content: space-between;
             row-gap: 1rem;
         }
+    }
+
+    .contact-form-submit{
+        width: 100%;
+        padding-top: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        position: relative;
+
+        .submit-button{
+            width: 140px;
+            height: 40px;
+
+            border: 1px solid var(--color-3);
+            border-radius: 2rem;
+
+            background-color: var(--color-3);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 18px;
+            font-weight: 300;
+
+            cursor: pointer;
+            position: relative;
+
+            transition: all ease 250ms;
+            overflow: hidden;
+
+            p, i{
+                color: var(--color-6);
+                z-index: 1;
+            }
+        }
+
+        .submit-button:enabled::before{
+            content: '';
+            width: 110%;
+            height: 110%;
+
+            background-color: var(--color-1);
+            position: absolute;
+            left: -111%;
+        }
+
+        .submit-button:enabled:hover::before{
+            left: 0;
+            transition: all ease 250ms;
+        }
+
+        .submit-button:disabled{
+            opacity: 30%;
+            cursor: not-allowed;
+        }
+
+        .submit-button::after{
+            content: '';
+            
+            width: 110%;
+            height: 110%;
+            
+            background: url(../../../assets/svg/ok.svg);
+            background-size: 35px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: var(--color-3);
+
+            position: absolute;
+            z-index: 2;
+            
+            opacity: 0%;
+            transition: all ease 300ms;
+        }
+
+        .submit-button.sent::after{
+            opacity: 100%;
+
+        }
+
     }
 }
