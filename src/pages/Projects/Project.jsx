@@ -12,7 +12,7 @@ function Project({img_url, title, description, roles, tools}){
     return(
         <div className={`${styles.project} ${isVisible ? styles.visible : ""}`} id={`project_${Math.floor(Math.random() * 10000)}`} ref={containerRef}>
             <div className={styles.project_left_side}>
-                <img src={`./src/assets/img/${img_url}`} className={styles.project_image} />
+                <img src={`./assets/img/${img_url}`} className={styles.project_image} />
             </div>
             <div className={styles.project_right_side}>
                 <h2 className={styles.project_title}>{title}</h2>

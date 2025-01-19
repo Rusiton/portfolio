@@ -24,7 +24,7 @@ function Education({dictionary}){
 
     return(
         <div className={styles.section_education_container + " " + animationClass}>
-            <img src="./src/assets/svg/education.svg" className={styles.section_education_icon} />
+            <img src="./assets/svg/education.svg" className={styles.section_education_icon} />
             <h2 className={styles.section_education_title}>{dictionary.education.title}</h2>
             <div className={styles.section_education_content}>
                 <PastEducation dictionary={dictionary} />

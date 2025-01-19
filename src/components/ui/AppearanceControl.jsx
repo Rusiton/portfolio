@@ -12,8 +12,8 @@ function AppearanceControl({onLanguajeChange, onThemeChange}){
 
     return(
         <div className="appearance-control">
-            <button onClick={onLanguajeChange}><img src={context.languaje === 'english' ? './src/assets/svg/en.svg' : './src/assets/svg/es.svg'} /></button>
-            <button onClick={onThemeChange}><img src={context.theme === 'dark' ? './src/assets/svg/dark.svg' : './src/assets/svg/light.svg'} /></button>
+            <button onClick={onLanguajeChange}><img src={context.languaje === 'english' ? './assets/svg/en.svg' : './assets/svg/es.svg'} /></button>
+            <button onClick={onThemeChange}><img src={context.theme === 'dark' ? './assets/svg/dark.svg' : './assets/svg/light.svg'} /></button>
         </div>
     );
 }

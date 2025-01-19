@@ -1,0 +1,15 @@
+{
+    "en": {
+        "introduction": "Introduction",
+        "about": "About me",
+        "projects": "Projects",
+        "contact": "Contact me"
+    },
+
+    "es": {
+        "introduction": "Introducción",
+        "about": "Sobre mi",
+        "projects": "Proyectos",
+        "contact": "Contáctame"
+    }
+}

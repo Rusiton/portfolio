@@ -22,7 +22,7 @@ function Knowledge({dictionary}){
     
     return(
         <div className={styles.section_knowledge_container + " " + animationClass}>
-            <img src="./src/assets/svg/knowledge.svg" className={styles.section_experience_icon} />
+            <img src="./assets/svg/knowledge.svg" className={styles.section_experience_icon} />
             <h2 className={styles.section_knowledge_title}>{dictionary.knowledge.title}</h2>
             <Languajes dictionary={dictionary} />
         </div>

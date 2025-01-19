@@ -23,7 +23,7 @@ function Experience({dictionary}){
     return(
         <div className={styles.section_experience_container + " " + animationClass}>
 
-            <img src="./src/assets/img/experience.png" className={styles.section_experience_icon} />
+            <img src="./assets/img/experience.png" className={styles.section_experience_icon} />
         
             <h2 className={styles.section_experience_title}>{dictionary.workexp.title}</h2>
             <div className={styles.section_experience_content}>

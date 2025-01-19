@@ -19,7 +19,7 @@ function LanguajeItem({iClassName, iStyle, label, img}){
 
     return(
         <div className={styles.section_knowledge_col_item + " " + animationClass} id={"languaje_item" + randId}>
-            {iClassName ? <i className={iClassName} style={iStyle}></i> : (img ? <img src={`./src/assets/svg/${img}.svg`} /> : null)}
+            {iClassName ? <i className={iClassName} style={iStyle}></i> : (img ? <img src={`./assets/svg/${img}.svg`} /> : null)}
             <p className={styles.section_knowledge_col_item_label}>{label}</p>
         </div>
     );

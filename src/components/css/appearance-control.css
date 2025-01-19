@@ -12,6 +12,11 @@
     -moz-transform: translateX(-200%);
     -ms-transform: translateX(-200%);
 
+    transition: all ease 1.3s;
+    -webkit-transition: all ease 1.3s;
+    -o-transition: all ease 1.3s;
+    -moz-transition: all ease 1.3s;
+
     button{
         width: 25px;
         height: 25px;
@@ -28,31 +33,9 @@
 }
 
 .appearance-control.animated{
-    animation: 1s ease slide-in-left;
-    -webkit-animation: 1s ease slide-in-left;
-    -o-animation: 1s ease slide-in-left;
-    -moz-animation: 1s ease slide-in-left;
-
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
     -o-transform: translateX(0%);
     -moz-transform: translateX(0%);
     -ms-transform: translateX(0%);
-}
-
-@keyframes slide-in-left{
-    from{
-        transform: translateX(-200%);
-        -webkit-transform: translateX(-200%);
-        -o-transform: translateX(-200%);
-        -moz-transform: translateX(-200%);
-        -ms-transform: translateX(-200%);
-    }
-    to{
-        transform: translateX(0%);
-        -webkit-transform: translateX(0%);
-        -o-transform: translateX(0%);
-        -moz-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-    }
 }
