@@ -20,7 +20,7 @@ export default function ProjectCard({ project, callback }: CardOptions) {
 
             { project.img &&             
                 <img 
-                    src={`src/assets/img/${project.img}`} alt="project_img" 
+                    src={`img/${project.img}`} alt="project_img" 
                     className="absolute z-0 inset-0 translate-y-full h-full rounded-3xl object-cover transition-transform duration-300 ease-in-out group-hover:translate-y-[25%] opacity-75"
                 />
             }
