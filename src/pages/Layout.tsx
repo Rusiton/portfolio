@@ -24,7 +24,7 @@ export default function Layout() {
                     </ul>
                 </nav>
             </header>
-            <main className="grow">
+            <main className="grow overflow-y-auto">
                 <Outlet />
             </main>
         </div>

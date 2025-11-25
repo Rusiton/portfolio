@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import { projects } from "@/assets/json/projects.json";
+import Chip from "@/components/ui/chip";
 
 type ProjectType = {
     id: number,
@@ -64,9 +65,10 @@ export default function ProjectsScreen() {
                             { displayedProject.tags &&
                                 <ul className="flex justify-center flex-wrap gap-4 select-none">
                                     { displayedProject.tags.map(tag => 
-                                        <li key={tag} className="py-2 px-4 rounded-full bg-muted shadows grid place-content-center transition-all hover:-translate-y-1 hover:opacity-90">
-                                            <span className="text-sm">{ tag }</span>
-                                        </li>
+                                        <Chip 
+                                            key={tag}
+                                            text={tag}
+                                        />
                                     ) }
                                 </ul>
                             }
