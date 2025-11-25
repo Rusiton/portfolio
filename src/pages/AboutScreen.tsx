@@ -75,10 +75,9 @@ export default function AboutScreen() {
                             <div className="mt-10 flex flex-wrap gap-3">
                             {["Clean code", "Performance", "User-first design", "Maintainability"].map(
                                 (item) => (
-                                <Chip 
-                                    key={item}
-                                    text={item}
-                                />
+                                    <li key={item}>
+                                        <Chip text={item} />
+                                    </li>
                                 )
                             )}
                             </div>

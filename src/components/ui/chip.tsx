@@ -4,8 +4,8 @@ interface ChipOptions {
 
 export default function Chip({ text }: ChipOptions) {
     return (
-        <li className="py-2 px-4 rounded-full bg-muted shadows grid place-content-center transition-all hover:-translate-y-1 hover:opacity-90">
+        <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-card border border-lightest-onyx/20 text-foreground shadows text-sm shadow-sm hover:bg-lighter-onyx transition-colors">
             <span className="text-sm">{ text }</span>
-        </li>
+        </div>
     )
 }
