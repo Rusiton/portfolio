@@ -72,7 +72,7 @@ export default function AboutScreen() {
                                 </SoftReveal>
                             </div>
 
-                            <div className="mt-10 flex flex-wrap gap-3">
+                            <div className="mt-10 flex flex-wrap gap-3 list-none">
                             {["Clean code", "Performance", "User-first design", "Maintainability"].map(
                                 (item) => (
                                     <li key={item}>
