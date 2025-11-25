@@ -28,7 +28,7 @@ const tech = {
 export default function StackScreen() {
     return (
         <div className="screen-container flex items-center justify-center">
-            <div className="select-none">
+            <div className="select-none px-4">
                 <SlideIn delay={0.1}>
                     <h1 className="text-4xl font-bold text-foreground">
                         My <br />
@@ -39,7 +39,7 @@ export default function StackScreen() {
                 <Separator className="my-4" />
 
                 <div className="py-6">
-                    <div className="flex flex-wrap gap-8">
+                    <div className="flex justify-center flex-wrap gap-8">
 
                         { Object.entries(tech).map(([key, stack]) =>
                             <div key={key}>
