@@ -18,7 +18,13 @@ export default function ContactInfo() {
                 <div className="flex flex-col gap-1">
                     <p className="flex items-center gap-2">
                         <Mail size={12} />
-                        galassosantiago05@gmail.com
+                        <a
+                            href="mailto:galassosantiago05@gmail.com"
+                            target="_blank"
+                            className="hover:underline hover:text-primary"
+                        >
+                            galassosantiago05@gmail.com
+                        </a>
                     </p>
                     <p className="flex items-center gap-2">
                         <SiGithub size={12} />
