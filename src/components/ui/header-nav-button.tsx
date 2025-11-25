@@ -12,7 +12,7 @@ export default function HeaderNavButton({ text, to } : ButtonOptions) {
     return (
         <Button 
             variant='secondary' 
-            className="min-w-36 text-muted-foreground hover:text-secondary-foreground"
+            className="min-w-36"
             onClick={() => navigate(to)}>
             { text }
         </Button>

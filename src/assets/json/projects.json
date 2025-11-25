@@ -1,0 +1,32 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "X-Clone",
+            "img": "x-clone.webp",
+            "desc": "My first Laravel project, clone of the famous social-media app X, previously known as Twitter. Made purely using the Laravel TALL stack.",
+            "embed": "https://www.youtube.com/embed/zob9BQmir34",
+            "tags": [
+                "Laravel", "Livewire", "Alpine JS", "Tailwind", "Blade"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Task Manager",
+            "desc": "Inspired from kanban applications like Trello, I created this app to adquiere knowledge in the field of real-time data and team management.",
+            "embed": "https://www.youtube.com/embed/gB3sObcR4_Q?si=1R0j9Sxwung9TDCn",
+            "tags": [
+                "Laravel", "React", "Tailwind", "API Tokens"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Profile Picture Uploader",
+            "img": "picloader.webp",
+            "desc": "Simple but strong application made to upload an image as your profile picture which then can be used or downloaded by other users. It's perhaps my most complete application yet. Includes Backend API in Laravel and Frontend in React. Implements Google OAuth, Sanctum Authentication with API tokens, Email sending, Query Caching with TanStack (React Query), Cloud Storage, and so on.",
+            "tags": [
+                "Laravel", "React", "Tailwind", "Google OAuth", "API Tokens", "Cloud Storage", "React Query"
+            ]
+        }
+    ]
+}
