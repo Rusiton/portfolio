@@ -5,11 +5,13 @@ interface Props {
   children: ReactNode;
   delay?: number;
   y?: number;
+  style?: string,
 }
 
-export function FadeIn({ children, delay = 0, y = 20 }: Props) {
+export function FadeIn({ children, delay = 0, y = 20, style = "" }: Props) {
   return (
     <motion.div
+      className={style}
       initial={{ opacity: 0, y }}
       animate={{ opacity: 1, y: 0 }}
       transition={{

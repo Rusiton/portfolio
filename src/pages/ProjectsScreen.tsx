@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 import { projects } from "@/assets/json/projects.json";
 import Chip from "@/components/ui/chip";
+import { FadeIn } from "@/components/animations/fade-in";
 
 type ProjectType = {
     id: number,
@@ -77,32 +78,34 @@ export default function ProjectsScreen() {
                 }
             </Modal>
 
-            <div className="card w-full md:w-2/3 lg:w-3/5 rounded-3xl p-10 bg-card select-none">
-                <h1 className="font-semibold text-xl">
-                    My Projects
-                </h1>
+            <FadeIn style="w-full md:w-2/3 lg:w-3/5">
+                <div className="card rounded-3xl p-10 bg-card select-none">
+                    <h1 className="font-semibold text-xl">
+                        My Projects
+                    </h1>
 
-                <Separator className="mt-4 mb-8" />
+                    <Separator className="mt-4 mb-8" />
 
-                <div className="md:px-12">
-                    <Carousel opts={{
-                        align: "center",
-                    }} className="grow">
-                        <CarouselContent className="py-4 pl-4">
-                            { projects.map((project) =>
-                                <CarouselItem key={project.id} className="basis-90">
-                                    <ProjectCard 
-                                        project={project} 
-                                        callback={() => displayProjectInfo(project.id)} 
-                                    /> 
-                                </CarouselItem>
-                            )}
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
+                    <div className="md:px-12">
+                        <Carousel opts={{
+                            align: "center",
+                        }} className="grow">
+                            <CarouselContent className="py-4 pl-4">
+                                { projects.map((project) =>
+                                    <CarouselItem key={project.id} className="basis-90">
+                                        <ProjectCard 
+                                            project={project} 
+                                            callback={() => displayProjectInfo(project.id)} 
+                                        /> 
+                                    </CarouselItem>
+                                )}
+                            </CarouselContent>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </Carousel>
+                    </div>
                 </div>
-            </div>
+            </FadeIn>
 
         </div>
     )
