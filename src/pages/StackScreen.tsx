@@ -10,14 +10,14 @@ const tech = {
         { label: "React Query", icon: <SiReactquery />, tooltip: "Caching library for React" },
         { label: "TypeScript", icon: <SiTypescript />, tooltip: "Superset language of JavaScript"  },
         { label: "JavaScript", icon: <SiJavascript />, tooltip: "Frontend languaje" },
-        { label: "TailwindCSS", icon: <SiTailwindcss />, tooltip: "CSS framework" },
+        { label: "Tailwind CSS", icon: <SiTailwindcss />, tooltip: "CSS framework" },
     ],
     backend: [
         { label: "Laravel", icon: <SiLaravel />, tooltip: "Backend framework" },
         { label: "PHP", icon: <SiPhp />, tooltip: "Backend language" },
     ],
     ui: [
-        { label: "Shadcn/UI", icon: <SiShadcnui />, tooltip: "Frontend compontent library" },
+        { label: "shadcn/ui", icon: <SiShadcnui />, tooltip: "Frontend compontent library" },
         { label: "Figma", icon: <SiFigma />, tooltip: "UI Design software" },
     ],
     databases: [
