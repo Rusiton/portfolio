@@ -35,7 +35,7 @@ export default function AboutScreen() {
 
                             <SoftReveal>
                                 <p className="text-md text-muted-foreground mt-4 leading-relaxed">
-                                I&apos;m a <span className="text-primary font-semibold">Full-stack Web Developer</span>, currently studying Computer Engineering. I combine my technical background as an Information Technology Technician with hands-experience building full-tack applications. I enjoy designing clean interfaces, creating efficient systems, continuously improving my skills through meaningful projects.
+                                I&apos;m a <span className="text-primary font-semibold">Full-stack Web Developer</span>, currently studying Computer Engineering. I combine my technical background as an Information Technology Technician with hands-experience building full-stack applications. I enjoy designing clean interfaces, creating efficient systems, continuously improving my skills through meaningful projects.
                                 </p>
                             </SoftReveal>
 
