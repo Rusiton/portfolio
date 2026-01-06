@@ -1,11 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import { Reveal } from "@/components/animations/reveal";
+import { useContactModal } from "@/providers/ContactModalProvider";
+
 import CallToAction from "@/components/ui/call-to-action";
+
+import { Reveal } from "@/components/animations/reveal";
 import { SlideIn } from "@/components/animations/slide-in";
 import { FadeIn } from "@/components/animations/fade-in";
 
 export default function HeaderScreen() {
     const navigate = useNavigate();
+    const { setOpen } = useContactModal();
 
     return (
         <div className="screen-container flex justify-center items-center">
@@ -41,7 +45,7 @@ export default function HeaderScreen() {
                             <CallToAction 
                                 text="Let`s talk" 
                                 size="md"
-                                callback={() => navigate('/contact')} 
+                                callback={() => setOpen(true)} 
                             />
                         </div>
 

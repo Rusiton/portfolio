@@ -46,7 +46,7 @@ export default function Modal({ children, open, close }: ModalOptions) {
         <div 
             ref={modalContainerRef} 
             onClick={handleClick}
-            className={`absolute w-screen h-screen -z-10 top-0 left-0 p-4 bg-background/50 flex items-center justify-center`}
+            className={`absolute w-screen h-screen -z-10 top-0 left-0 p-4 bg-background/50 backdrop-blur-sm flex items-center justify-center`}
             >
             <div 
                 className={`relative card p-8 rounded-2xl bg-card transition-all duration-150 ease-in-out 

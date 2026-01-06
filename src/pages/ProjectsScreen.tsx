@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 import Modal from "@/components/ui/modal";
+import { useContactModal } from "@/providers/ContactModalProvider";
+
 import ProjectCard from "@/components/ui/project-card";
 import { Separator } from "@/components/ui/separator";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -9,7 +11,6 @@ import { projects } from "@/assets/json/projects.json";
 import Chip from "@/components/ui/chip";
 import { FadeIn } from "@/components/animations/fade-in";
 import CallToAction from "@/components/ui/call-to-action";
-import { useNavigate } from "react-router-dom";
 
 type ProjectType = {
     id: number,
@@ -28,7 +29,7 @@ export default function ProjectsScreen() {
     const [openModal, setOpenModal] = useState<boolean>(false);
     const [displayedProject, setDisplayedProject] = useState<ProjectType | null>(null);
 
-    const navigate = useNavigate();
+    const { setOpen } = useContactModal();
 
     const displayProjectInfo = (id: number) => {
         setOpenModal(true);
@@ -99,7 +100,7 @@ export default function ProjectsScreen() {
                                         <CallToAction
                                             text={displayedProject.ctaButton}
                                             size="sm"
-                                            callback={() => navigate('/contact')}
+                                            callback={() => (setOpenModal(false), setOpen(true))}
                                         />
                                     </div>
                                     <p className="mt-4 w-full text-center italic text-xs text-foreground-muted">
