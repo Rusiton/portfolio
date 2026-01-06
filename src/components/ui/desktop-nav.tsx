@@ -27,8 +27,8 @@ export default function DesktopNav() {
             
             <ul className="flex gap-2">
                 <li>
-                    <ContactInfo setOpen={setOpenContactModal} />
-                    <ContactModal open={openContactModal} setOpen={setOpenContactModal} />
+                    <ContactInfo />
+                    <ContactModal />
                 </li>
                 <li>
                     <HomeButton />
