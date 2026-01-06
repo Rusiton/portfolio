@@ -35,7 +35,7 @@ export default function AboutScreen() {
 
                             <SoftReveal>
                                 <p className="text-md text-muted-foreground mt-4 leading-relaxed">
-                                I&apos;m a <span className="text-primary font-semibold">Full-stack Web Developer</span>, currently studying Computer Engineering. I combine my technical background as an Information Technology Technician with hands-experience building full-stack applications. I enjoy designing clean interfaces, creating efficient systems, continuously improving my skills through meaningful projects.
+                                I&apos;m a <span className="text-primary font-semibold">Full-stack Web Developer focused on building custom web applications for real-world use.</span> I have hands-on experience developing full-stack systems, combining a strong technical background as an IT Technician with practical software development skills. I value clean interfaces, efficient systems, and maintainable code.
                                 </p>
                             </SoftReveal>
 
@@ -55,31 +55,38 @@ export default function AboutScreen() {
                                 <SoftReveal>
                                     <ul className="text-foreground mt-2 flex flex-col gap-3">
                                         <li>
-                                            • Studying <span className="font-semibold">Computer Engineering</span>, where I deepen my understanding of 
-                                            algorithms, systems, and software architecture.
+                                            • <span className="font-semibold">Studying Computer Engineering</span>, Studying Computer Engineering, strengthening my understanding of algorithms, systems, and software architecture to build more robust applications.
                                         </li>
 
                                         <li>
-                                            • Applying my background as an <span className="font-semibold">IT Technician</span> to build 
-                                            real, full-stack projects and strengthen both my backend and frontend skills.
+                                            • <span className="font-semibold">Applying my IT Technician background</span> to design and develop real-world full-stack solutions with attention to performance and reliability.
                                         </li>
 
                                         <li>
-                                            • Expanding my experience with Laravel, React and UI/UX principles while 
-                                            focusing on clean and maintainable development practices.
+                                            • <span className="font-semibold">Working with modern web technologies</span> such as Laravel and React, while focusing on clean code, usability, and long-term maintainability.
                                         </li>
                                     </ul>
                                 </SoftReveal>
                             </div>
 
-                            <div className="mt-10 flex flex-wrap gap-3 list-none">
-                            {["Clean code", "Performance", "User-first design", "Maintainability"].map(
-                                (item) => (
-                                    <li key={item}>
-                                        <Chip text={item} />
-                                    </li>
-                                )
-                            )}
+                            <div className="mt-10 flex flex-wrap gap-3 list-none relative">
+                                <div className="absolute h-full left-[-23px] flex items-center">
+                                    <Circle size="13" fill="true" className="text-primary" />
+                                </div>
+
+                                {["Clean code", "Performance", "User-first design", "Maintainability"].map(
+                                    (item) => (
+                                        <li key={item}>
+                                            <Chip text={item} />
+                                        </li>
+                                    )
+                                )}
+                            </div>
+
+                            <div className="mt-8">
+                                <p className="text-sm italic">
+                                    I`m comfortable handling projects end-to-end, from planning and development to deployment.
+                                </p>
                             </div>
                         </div>
                     </div>
