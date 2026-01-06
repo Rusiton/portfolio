@@ -49,9 +49,9 @@ export default function ProjectsScreen() {
                 { displayedProject && 
                     <div className="w-full md:w-[500px] lg:w-[800px] max-h-[550px] overflow-y-auto">
                         { displayedProject.title &&                     
-                            <h1 className="text-2xl font-bold">
+                            <h2 className="text-2xl font-bold">
                                 { displayedProject.title }
-                            </h1>
+                            </h2>
                         }
 
                         <Separator className="my-4" />
