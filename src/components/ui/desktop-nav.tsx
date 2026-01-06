@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ContactInfo from "./contact-info";
 import ContactModal from "./contact-modal";
 import HeaderNavButton from "./header-nav-button";
@@ -6,8 +5,6 @@ import HomeButton from "./home-button";
 import ThemeSwitch from "./theme-switch";
 
 export default function DesktopNav() {
-    const [openContactModal, setOpenContactModal] = useState<boolean>(false);
-
     return (
         <nav className="hidden md:flex justify-between">
             <ul className="flex gap-6">
