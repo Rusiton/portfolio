@@ -2,46 +2,64 @@
     "projects": [
         {
             "id": 1,
-            "title": "Eva DB Hospital Manager",
-            "desc": "Thesis project developed in collaboration with Eva Perón Hospital. Comprehensive patient management system for intensive care unit featuring user authentication, medical records administration, patient management, and internal system communication. Implements custom MVC architecture with PHP templating system, optimized query models, and REST API for frontend-backend communication.",
-            "embed": "https://www.youtube.com/embed/oQnkd0SiIy0?si=GbItZ3mB8qSwcAhs",
-            "tags": [
-                "PHP", "MySQL", "JavaScript", "HTML", "CSS"
-            ]
-        },
-        {
-            "id": 2,
-            "title": "X-Clone",
-            "desc": "My first Laravel project, clone of the famous social-media app X, previously known as Twitter. Made purely using the Laravel TALL stack.",
-            "embed": "https://www.youtube.com/embed/zob9BQmir34",
-            "tags": [
-                "Laravel", "Livewire", "Alpine JS", "Tailwind CSS", "Blade", "MySQL"
-            ]
-        },
-        {
-            "id": 3,
             "title": "Task Manager",
-            "desc": "Inspired from kanban applications like Trello, I created this app to adquiere knowledge in the field of real-time data and team management.",
+            "firstParagraph": "Team-oriented task manager application, ideal to organize projects, assing responsabilities and make project follow-up.",
+            "secondParagraph": "Inspired by Kanban-style workflows, this system can be adapted to businesses that need real-time task tracking and team collaboration.",
             "embed": "https://www.youtube.com/embed/gB3sObcR4_Q?si=1R0j9Sxwung9TDCn",
             "tags": [
                 "Laravel", "React", "Tailwind CSS", "API Tokens", "MySQL"
-            ]
+            ],
+            "cta": "Do you need a system to organize teams or tasks in your business?",
+            "ctaButton": "Let`s talk about your project"
+        },
+        {
+            "id": 2,
+            "title": "Eva DB - Institutional Management System",
+            "firstParagraph": "Eva DB is a comprehensive web-based management system developed for institutional environments. It allows authorized staff to manage users, internal records, and workflows from a centralized platform, improving organization, traceability, and internal communication.",
+            "secondParagraph": "The system was developed in collaboration with a public hospital, addressing real-world requirements such as access control, data integrity, and role-based permissions.",
+            "thirdParagraph": "Built with a scalable architecture and REST-based communication, the system can be adapted to different types of institutions or businesses with complex internal processes.",
+            "embed": "https://www.youtube.com/embed/oQnkd0SiIy0?si=GbItZ3mB8qSwcAhs",
+            "tags": [
+                "PHP", "MySQL", "JavaScript", "HTML", "CSS"
+            ],
+            "cta": "Do you need a custom internal system for your organization or institution?",
+            "ctaButton": "Discuss a custom system"
+        },
+        {
+            "id": 3,
+            "title": "X-Clone - Social Platform Prototype",
+            "firstParagraph": "X-Clone is an interactive web platform focused on user-generated content and real-time interaction. The application includes user authentication, profiles, content publishing, and dynamic updates, providing a solid foundation for social or community-driven platforms.",
+            "secondParagraph": "Built using the Laravel TALL stack, the system demonstrates how modern web applications can deliver fast, responsive user experiences without sacrificing maintainability.",
+            "thirdParagraph": "This type of platform can be adapted to communities, internal company networks, or custom social applications.",
+            "embed": "https://www.youtube.com/embed/zob9BQmir34",
+            "tags": [
+                "Laravel", "Livewire", "Alpine JS", "Tailwind CSS", "Blade", "MySQL"
+            ],
+            "cta": "This architecture can be adapted to platforms that require user interaction and content publishing.",
+            "ctaButton": "Let`s discuss your idea"
         },
         {
             "id": 4,
             "title": "Profile Picture Uploader",
-            "desc": "Simple but strong application made to upload an image as your profile picture which then can be used or downloaded by other users. It's perhaps my most complete application yet. Includes Backend API in Laravel and Frontend in React. Implements Google OAuth, Sanctum Authentication with API tokens, Email sending, Query Caching with TanStack (React Query), Cloud Storage, and so on.",
+            "firstParagraph": "Simple but strong application made to upload an image as your profile picture which then can be used or downloaded by other users. ",
+            "secondParagraph": "",
+            "thirdParagraph": "It's perhaps my most complete application yet. Includes Backend API in Laravel and Frontend in React. Implements Google OAuth, Sanctum Authentication with API tokens, Email sending, Query Caching with TanStack (React Query), Cloud Storage, and so on.",
             "tags": [
                 "Laravel", "React", "Tailwind CSS", "Google OAuth", "API Tokens", "Cloud Storage", "React Query", "MySQL"
-            ]
+            ],
+            "cta": "I can develop a system to store all your files in one click",
+            "ctaButton": ""
         },
         {
             "id": 5,
             "title": "Personal Portfolio",
-            "desc": "A simple landing page built with React JS to showcase who I am, my skills, and my other projects.",
+            "firstParagraph": "My personal portfolio, a simple web page I built to showcase who I am, my skills, and my projects.",
+            "secondParagraph": "",
             "tags": [
                 "React", "Tailwind CSS"
-            ]
+            ],
+            "cta": "I can make your own personal or businnes portfolio too!",
+            "ctaButton": ""
         }
     ]
 }

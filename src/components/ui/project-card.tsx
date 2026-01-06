@@ -1,12 +1,9 @@
 import CallToAction from "./call-to-action";
 
 type ProjectType = {
-    id: number;
-    title: string;
-    img?: string;
-    desc: string;
-    demo?: string;
-    tags?: string[];
+    id: number,
+    title: string,
+    img?: string,
 }
 
 interface CardOptions {

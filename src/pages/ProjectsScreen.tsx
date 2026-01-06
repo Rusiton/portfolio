@@ -8,19 +8,27 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { projects } from "@/assets/json/projects.json";
 import Chip from "@/components/ui/chip";
 import { FadeIn } from "@/components/animations/fade-in";
+import CallToAction from "@/components/ui/call-to-action";
+import { useNavigate } from "react-router-dom";
 
 type ProjectType = {
     id: number,
     title: string,
     img?: string,
-    desc: string,
+    firstParagraph: string,
+    secondParagraph: string,
+    thirdParagraph?: string,
     embed?: string,
     tags?: string[],
+    cta: string,
+    ctaButton: string,
 }
 
 export default function ProjectsScreen() {
     const [openModal, setOpenModal] = useState<boolean>(false);
     const [displayedProject, setDisplayedProject] = useState<ProjectType | null>(null);
+
+    const navigate = useNavigate();
 
     const displayProjectInfo = (id: number) => {
         setOpenModal(true);
@@ -38,7 +46,7 @@ export default function ProjectsScreen() {
 
             <Modal open={openModal} close={() => setOpenModal(false)}>
                 { displayedProject && 
-                    <div className="w-full md:w-[500px] lg:w-[700px]">
+                    <div className="w-full md:w-[500px] lg:w-[800px] max-h-[550px] overflow-y-auto">
                         { displayedProject.title &&                     
                             <h1 className="text-2xl font-bold">
                                 { displayedProject.title }
@@ -47,9 +55,17 @@ export default function ProjectsScreen() {
 
                         <Separator className="my-4" />
 
-                        <div className="flex flex-col gap-8">
-                            { displayedProject.desc &&
-                                <p>{ displayedProject.desc }</p>
+                        <div className="flex flex-col gap-4">
+                            { displayedProject.firstParagraph &&
+                                <p className="text-sm">{ displayedProject.firstParagraph }</p>
+                            }
+
+                            { displayedProject.secondParagraph &&
+                                <p className="text-sm">{ displayedProject.secondParagraph }</p>
+                            }
+
+                            { displayedProject.thirdParagraph &&
+                                <p className="text-sm">{ displayedProject.thirdParagraph }</p>
                             }
 
                             { displayedProject.embed &&
@@ -72,6 +88,24 @@ export default function ProjectsScreen() {
                                         />
                                     ) }
                                 </ul>
+                            }
+                            
+                            { displayedProject.cta &&
+                                <div className="mt-2">
+                                    <p className="w-full text-center font-bold underline underline-offset-2">
+                                        {displayedProject.cta}
+                                    </p>
+                                    <div className="mt-4 w-full flex justify-center">
+                                        <CallToAction
+                                            text={displayedProject.ctaButton}
+                                            size="sm"
+                                            callback={() => navigate('/contact')}
+                                        />
+                                    </div>
+                                    <p className="mt-4 w-full text-center italic text-xs text-foreground-muted">
+                                        Tailored to your business needs
+                                    </p>
+                                </div>
                             }
                         </div>
                     </div>
