@@ -22,7 +22,7 @@ export default function HeaderScreen() {
                         <h1 className="font-semibold text-5xl leading-14">
                             { t('header.greeting') } <br />
                             <span className="font-bold">
-                                { t('im') } <span className="text-primary">Santiago</span>
+                                { t('header.im') } <span className="text-primary">Santiago</span>
                             </span>
                         </h1>
                     </Reveal>
