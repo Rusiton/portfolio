@@ -10,9 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/es" replace />} />
-
-        <Route path="/:lang" element={<Layout />} >
+        <Route element={<Layout />} >
 
           <Route index element={<HeaderScreen />} />
           <Route path="projects" element={<ProjectsScreen />} />
@@ -21,7 +19,7 @@ function App() {
 
         </Route>
 
-        <Route path="*" element={<Navigate to="/es" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )
