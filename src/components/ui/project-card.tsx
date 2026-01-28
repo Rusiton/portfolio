@@ -1,9 +1,18 @@
+import { useTranslation } from "react-i18next";
 import CallToAction from "./call-to-action";
 
 type ProjectType = {
     id: number,
-    title: string,
-    img?: string,
+    translationKey: string,
+    title: boolean,
+    firstParagraph: boolean,
+    secondParagraph: boolean,
+    thirdParagraph: boolean,
+    img: boolean,
+    embed: string,
+    tags: string[],
+    cta: boolean,
+    ctaButton: boolean,
 }
 
 interface CardOptions {
@@ -12,6 +21,8 @@ interface CardOptions {
 }
 
 export default function ProjectCard({ project, callback }: CardOptions) {
+    const { t } = useTranslation();
+
     return (
         <div className={`relative group card w-72 h-96 p-8 pt-12 rounded-4xl bg-linear-to-b from-muted to-card select-none overflow-hidden transition-transform ease-in-out hover:-translate-y-2 hover:outline-1`}>
 
@@ -23,11 +34,11 @@ export default function ProjectCard({ project, callback }: CardOptions) {
             }
 
             <div className="relative z-10 h-full flex flex-col justify-between">
-                <h2 className="text-lg font-bold">{project.title}</h2>
+                <h2 className="text-lg font-bold">{ t(`projects.projects.${project.translationKey}.title`) }</h2>
 
                 <div className="flex justify-center">
                     <CallToAction 
-                        text="See more" 
+                        text={ t('projects.cardCta') } 
                         size="md"
                         callback={callback}
                     />

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useContactModal } from "@/providers/ContactModalProvider";
+import { useTranslation } from "react-i18next";
 
 import CallToAction from "@/components/ui/call-to-action";
 
@@ -11,46 +12,48 @@ export default function HeaderScreen() {
     const navigate = useNavigate();
     const { setOpen } = useContactModal();
 
+    const { t } = useTranslation();
+
     return (
         <div className="screen-container flex justify-center items-center">
             <div className="flex flex-col gap-16">
                 <div className="flex flex-col gap-3 max-w-[500px]">
                     <Reveal delay={0.2}>
                         <h1 className="font-semibold text-5xl leading-14">
-                            Hey! <br />
+                            { t('header.greeting') } <br />
                             <span className="font-bold">
-                                I&apos;m <span className="text-primary">Santiago</span>
+                                { t('im') } <span className="text-primary">Santiago</span>
                             </span>
                         </h1>
                     </Reveal>
                     <SlideIn delay={0.5} x={-20}>
                         <h2 className="text-lg font-semibold">
-                            I build custom web applications for businesses and organizations.
+                            { t('header.subtitle_1') }
                         </h2>
                     </SlideIn>
                     <SlideIn delay={0.8} x={-20}>
                         <h2 className="text-md">
-                            From internal management systems to interactive platforms, I help turn ideas into scalable web solutions.
+                            { t('header.subtitle_2') }
                         </h2>
                     </SlideIn>
                 </div>
                 <FadeIn delay={1}>
                     <div className="flex flex-col justify-center items-center">
-                        <div className="flex gap-4">    
+                        <div className="flex items-center gap-4">    
                             <CallToAction 
-                                text="View my projects" 
+                                text={t('header.ctaProjects')}
                                 size="md"
                                 callback={() => navigate('/projects')} 
                             />
                             <CallToAction 
-                                text="Let`s talk" 
-                                size="md"
+                                text={t('header.ctaContact')}
+                                size="sm"
                                 callback={() => setOpen(true)} 
                             />
                         </div>
 
                         <p className="mt-14 text-xs italic">
-                            End-to-end development: design, backend, frontend, and deployment
+                            { t('header.lowerText') }
                         </p>
                     </div>
                 </FadeIn>

@@ -1,8 +1,12 @@
+import { Trans, useTranslation } from "react-i18next";
+
 import Chip from "@/components/ui/chip";
 import { SoftReveal } from "@/components/ui/soft-reveal";
 import { Circle } from "lucide-react";
 
 export default function AboutScreen() {
+    const { t } = useTranslation();
+
     return (
         <div className="screen-container md:flex md:items-center">
             <div className="flex flex-col md:flex-row items-center md:items-start justify-center">
@@ -28,14 +32,19 @@ export default function AboutScreen() {
 
                                 <SoftReveal>
                                     <h1 className="text-3xl font-semibold text-foreground flex items-center">
-                                        Who am I?
+                                        { t('about.title') }
                                     </h1>
                                 </SoftReveal>
                             </div>
 
                             <SoftReveal>
                                 <p className="text-md text-muted-foreground mt-4 leading-relaxed">
-                                I&apos;m a <span className="text-primary font-semibold">Full-stack Web Developer focused on building custom web applications for real-world use.</span> I have hands-on experience developing full-stack systems, combining a strong technical background as an IT Technician with practical software development skills. I value clean interfaces, efficient systems, and maintainable code.
+                                    <Trans 
+                                        i18nKey="about.description"
+                                        components={{
+                                            highlight: <span className='text-primary font-semibold' />
+                                        }}
+                                    />
                                 </p>
                             </SoftReveal>
 
@@ -47,7 +56,7 @@ export default function AboutScreen() {
 
                                     <SoftReveal>
                                         <h2 className="relative text-xl font-semibold text-foreground flex items-center">
-                                            Currently
+                                            { t('about.currently') }
                                         </h2>
                                     </SoftReveal>
                                 </div>
@@ -55,15 +64,30 @@ export default function AboutScreen() {
                                 <SoftReveal>
                                     <ul className="text-foreground mt-2 flex flex-col gap-3">
                                         <li>
-                                            • <span className="font-semibold">Studying Computer Engineering</span>, Studying Computer Engineering, strengthening my understanding of algorithms, systems, and software architecture to build more robust applications.
+                                            <Trans 
+                                                i18nKey="about.computerEngineering"
+                                                components={{
+                                                    highlight: <span className="font-semibold" />
+                                                }}
+                                            />
                                         </li>
 
                                         <li>
-                                            • <span className="font-semibold">Applying my IT Technician background</span> to design and develop real-world full-stack solutions with attention to performance and reliability.
+                                            <Trans 
+                                                i18nKey="about.applying"
+                                                components={{
+                                                    highlight: <span className="font-semibold" />
+                                                }}
+                                            />
                                         </li>
 
                                         <li>
-                                            • <span className="font-semibold">Working with modern web technologies</span> such as Laravel and React, while focusing on clean code, usability, and long-term maintainability.
+                                            <Trans 
+                                                i18nKey="about.working"
+                                                components={{
+                                                    highlight: <span className="font-semibold" />
+                                                }}
+                                            />
                                         </li>
                                     </ul>
                                 </SoftReveal>
@@ -74,19 +98,13 @@ export default function AboutScreen() {
                                     <Circle size="13" fill="true" className="text-primary" />
                                 </div>
 
-                                {["Clean code", "Performance", "User-first design", "Maintainability"].map(
+                                {["cleanCode", "performance", "userFirst", "maintainability"].map(
                                     (item) => (
                                         <li key={item}>
-                                            <Chip text={item} />
+                                            <Chip text={t(`about.chips.${item}`)} />
                                         </li>
                                     )
                                 )}
-                            </div>
-
-                            <div className="mt-8">
-                                <p className="text-sm italic">
-                                    I`m comfortable handling projects end-to-end, from planning and development to deployment.
-                                </p>
                             </div>
                         </div>
                     </div>

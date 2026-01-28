@@ -1,6 +1,5 @@
 import { Menu } from "lucide-react"
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 
@@ -8,20 +7,26 @@ import ThemeSwitch from "./theme-switch"
 import HomeButton from "./home-button"
 import ContactInfo from "./contact-info"
 import ContactModal from "./contact-modal"
+import LanguageSwitch from "./language-switch"
+import { useTranslation } from "react-i18next"
 
 const navigation = [
-    { href: "/projects", label: "My projects" },
-    { href: "/about", label: "Who am I" },
-    { href: "/stack", label: "My tech stack" },
+    { href: "/projects", translationKey: "projects" },
+    { href: "/about", translationKey: "about" },
+    { href: "/stack", translationKey: "stack" },
 ];
 
 export default function MobileNav() {
+    const { t } = useTranslation();
 
     return (
         <div className="flex items-center justify-between md:hidden">
             <ul className="flex gap-6">
                 <li>
                     <ThemeSwitch />
+                </li>
+                <li>
+                    <LanguageSwitch />
                 </li>
                 <li>
                     <HomeButton />
@@ -43,12 +48,6 @@ export default function MobileNav() {
                 </SheetTrigger>
 
                 <SheetContent side="right" className="bg-card border-none">
-                    <SheetHeader>
-                        <SheetTitle>Navigation Menu</SheetTitle>
-                        <VisuallyHidden>
-                            <SheetDescription>Nav menu for mobile</SheetDescription>
-                        </VisuallyHidden>
-                    </SheetHeader>
 
                     <nav className="mt-10 p-4 flex flex-col gap-4 text-lg">
                         {navigation.map((item) => (
@@ -57,7 +56,7 @@ export default function MobileNav() {
                                 to={item.href}
                                 className=" px-4 py-3 rounded-xl text-sm text-center text-foreground font-bold hover:text-primary hover:bg-muted transition-colors border border-card/10"
                                 >
-                                {item.label}
+                                { t(`nav.${item.translationKey}`) }
                             </Link>
                         ))}
                     </nav>

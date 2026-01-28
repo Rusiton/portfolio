@@ -1,0 +1,103 @@
+{
+    "nav": {
+        "projects": "Mis proyectos",
+        "about": "Quién soy",
+        "stack": "Mis herramientas"
+    },
+    "contact": {
+        "title": "Construyamos tu aplicación",
+        "emailCta": "Contáctame por correo electrónico",
+        "or": "o",
+        "whatsappCta": "Envíame un mensaje por WhatsApp",
+        "whatsappPlaceholderMessage": "¡Hola Santiago! Vi tu portafolio y me gustaría hablar sobre un proyecto web.",
+        "valueProposition": "Charla gratuita · Sin compromiso · Respuesta rápida",
+        "location": "Basado en Argentina · Trabajando remotamente desde cualquier lugar"
+    },
+    "header": {
+        "greeting": "¡Hola!",
+        "im": "Soy",
+        "subtitle_1": "Construyo aplicaciones web personalizadas para negocios y organizaciones.",
+        "subtitle_2": "Desde sistemas de administración, hasta plataformas interactivas, ayudo a convertir ideas en soluciones web escalables.",
+        "ctaProjects": "Ve mis proyectos",
+        "ctaContact": "Hablemos",
+        "lowerText": "Desarrollo punta a punta: diseño, backend, frontend y desplegado"
+    },
+    "projects": {
+        "title": "Mis proyectos",
+        "cardCta": "Ver más",
+        "projects": {
+            "taskManager": {
+                "title": "Gestor de Tareas",
+                "firstParagraph": "Aplicación de gestión de tareas orientada a equipos, ideal para organizar proyectos, asignar responsabilidades y hacer seguimiento de proyectos.",
+                "secondParagraph": "Inspirado en flujos de trabajo estilo Kanban, este sistema puede adaptarse a empresas que necesitan seguimiento de tareas en tiempo real y colaboración en equipo.",
+                "cta": "¿Necesitas un sistema para organizar equipos o tareas en tu negocio?",
+                "ctaButton": "Hablemos sobre tu proyecto"
+            },
+            "evaDB": {
+                "title": "Eva DB - Sistema de Gestión Institucional",
+                "firstParagraph": "Eva DB es un sistema de gestión integral basado en web desarrollado para entornos institucionales. Permite al personal autorizado gestionar usuarios, registros internos y flujos de trabajo desde una plataforma centralizada, mejorando la organización, trazabilidad y comunicación interna.",
+                "secondParagraph": "El sistema fue desarrollado en colaboración con un hospital público, abordando requisitos del mundo real como control de acceso, integridad de datos y permisos basados en roles.",
+                "thirdParagraph": "Construido con una arquitectura escalable y comunicación basada en REST, el sistema puede adaptarse a diferentes tipos de instituciones o empresas con procesos internos complejos.",
+                "cta": "¿Necesitas un sistema interno personalizado para tu organización o institución?",
+                "ctaButton": "Discutir un sistema personalizado"
+            },
+            "xClone": {
+                "title": "X-Clone - Prototipo de Plataforma Social",
+                "firstParagraph": "X-Clone es una plataforma web interactiva enfocada en contenido generado por usuarios e interacción en tiempo real. La aplicación incluye autenticación de usuarios, perfiles, publicación de contenido y actualizaciones dinámicas, proporcionando una base sólida para plataformas sociales o impulsadas por la comunidad.",
+                "secondParagraph": "Construido usando el stack TALL de Laravel, el sistema demuestra cómo las aplicaciones web modernas pueden ofrecer experiencias de usuario rápidas y responsivas sin sacrificar la mantenibilidad.",
+                "thirdParagraph": "Este tipo de plataforma puede adaptarse a comunidades, redes internas de empresa o aplicaciones sociales personalizadas.",
+                "cta": "Esta arquitectura puede adaptarse a plataformas que requieren interacción de usuarios y publicación de contenido.",
+                "ctaButton": "Hablemos de tu idea"
+            },
+            "profilePictureUploader": {
+                "title": "Cargador de Foto de Perfil",
+                "firstParagraph": "Aplicación simple pero robusta hecha para subir una imagen como tu foto de perfil que luego puede ser usada o descargada por otros usuarios.",
+                "secondParagraph": "Es quizás mi aplicación más completa hasta ahora. Incluye API Backend en Laravel y Frontend en React. Implementa Google OAuth, Autenticación Sanctum con tokens de API, Envío de emails, Caché de consultas con TanStack (React Query), Almacenamiento en la nube, y más.",
+                "cta": "Puedo desarrollar un sistema para almacenar todos tus archivos en un clic",
+                "ctaButton": "Construyamos eso para ti"
+            },
+            "portfolio": {
+                "title": "Portafolio Personal",
+                "firstParagraph": "Mi portafolio personal, una página web simple que construí para mostrar quién soy, mis habilidades y mis proyectos.",
+                "cta": "¡También puedo hacer tu propio portafolio personal o de negocios!",
+                "ctaButton": "Ponte en contacto"
+            }
+        }
+    },
+    "about": {
+        "title": "¿Quién soy?",
+        "description": "Soy un <highlight>Desarrollador Web Full-stack enfocado en construir aplicaciones web personalizadas para uso en el mundo real.</highlight> Tengo experiencia práctica desarrollando sistemas full-stack, combinando una sólida formación técnica como Técnico en Informática con habilidades prácticas de desarrollo de software. Valoro las interfaces limpias, los sistemas eficientes y el código mantenible.",
+        "currently": "Actualmente",
+        "computerEngineering": "• <highlight>Estudiando Ingeniería en Informática</highlight>, fortaleciendo mi comprensión de algoritmos, sistemas y arquitectura de software para construir aplicaciones más robustas.",
+        "applying": "• <highlight>Aplicando mi formación como Técnico en Informática</highlight> para diseñar y desarrollar soluciones full-stack del mundo real con atención al rendimiento y la confiabilidad.",
+        "working": "• <highlight>Trabajando con tecnologías web modernas</highlight> como Laravel y React, mientras me enfoco en código limpio, usabilidad y mantenibilidad a largo plazo.",
+        "chips": {
+            "cleanCode": "Código limpio",
+            "performance": "Rendimiento",
+            "userFirst": "Diseño centrado en el usuario",
+            "maintainability": "Mantenibilidad"
+        }
+    },
+    "stack": {
+        "title": "Mi <br /><highlight>stack de tecnologías</highlight>",
+        "tech": {
+            "frontend": {
+                "javascript": "Lenguaje frontend",
+                "typescript": "Lenguaje superconjunto de JavaScript",
+                "react": "Biblioteca/framework frontend",
+                "tailwind": "Framework CSS"
+            },
+            "backend": {
+                "php": "Lenguaje backend",
+                "laravel": "Framework backend"
+            },
+            "ui": {
+                "figma": "Software de diseño de interfaz de usuario",
+                "shadcn": "Biblioteca de componentes frontend"
+            },
+            "databases": {
+                "mysql": "Base de datos relacional"
+            }
+        }
+    }
+}

@@ -6,20 +6,19 @@ import { MailIcon, MapPin } from "lucide-react";
 import { Separator } from "./separator";
 import { Button } from "./button";
 import WhatsAppButton from "./whatsapp-button";
+import { useTranslation } from "react-i18next";
 
 export default function ContactModal() {
     const { open, setOpen } = useContactModal();
+    const { t } = useTranslation();
 
     return (
         <Modal open={open} close={() => setOpen(false)}>
             <div className="w-full md:w-[500px] lg:w-[800px] max-h-[550px] overflow-y-auto">
                 <div className="text-center mb-4">
                     <h2 className="text-xl font-bold mb-1">
-                        Let's build your web application
+                        { t('contact.title') }
                     </h2>
-                    <h3 className="text-md italic">
-                        Freelance full-stack development
-                    </h3>
                 </div>
 
                 <Separator />
@@ -28,7 +27,7 @@ export default function ContactModal() {
                     <div className="flex flex-col gap-4">
                         <div className="flex flex-col items-center gap-3">
                             <p className="w-full text-center text-sm">
-                                ✉️ Contact me via email
+                                { t('contact.emailCta') }
                             </p>
                             <a href="mailto:galassosantiago05@gmail.com">
                                 <Button className="text-foreground" size='lg'>
@@ -37,7 +36,7 @@ export default function ContactModal() {
                             </a>
                         </div>
 
-                        <p className="text-center text-sm"> or </p>
+                        <p className="text-center text-sm"> { t('contact.or') } </p>
 
                         <div className=" flex justify-center">
                             <WhatsAppButton />
@@ -46,11 +45,11 @@ export default function ContactModal() {
 
                     <div>
                         <p className="text-sm text-center">
-                            Free initial chat · No commitment · Fast Reply
+                            { t('contact.valueProposition') }
                         </p>
 
                         <p className="mt-4 flex justify-center items-center gap-2 text-xs">
-                            <MapPin /> <p>Based in Argentina · Working remotely worldwide</p>
+                            <MapPin /> { t('contact.location') }
                         </p>
                     </div>
 

@@ -1,0 +1,104 @@
+{
+    "nav": {
+        "projects": "My projects",
+        "about": "Who am I",
+        "stack": "My tech stack"
+    },
+    "contact": {
+        "title": "Let's build your application",
+        "emailCta": "Contact me via email",
+        "or": "or",
+        "whatsappCta": "Message me on WhatsApp",
+        "whatsappPlaceholderMessage": "Hi Santiago! I saw your portfolio and I'd like to talk about a web project.",
+        "valueProposition": "Free chat · No commitment · Fast Reply",
+        "location": "Based in Argentina · Working remotely worldwide"
+
+    },
+    "header": {
+        "greeting": "Hey!",
+        "im": "I'm",
+        "subtitle_1": "I build custom web applications for businesses and organizations.",
+        "subtitle_2": "From internal management systems to interactive platforms, I help turn ideas into scalable web solutions.",
+        "ctaProjects": "View my projects",
+        "ctaContact": "Let's talk",
+        "lowerText": "End-to-end development: design, backend, frontend, and deployment"
+    },
+    "projects": {
+        "title": "My projects",
+        "cardCta": "See more",
+        "projects": {
+            "taskManager": {
+                "title": "Task Manager",
+                "firstParagraph": "Team-oriented task manager application, ideal to organize projects, assing responsabilities and make project follow-up.",
+                "secondParagraph": "Inspired by Kanban-style workflows, this system can be adapted to businesses that need real-time task tracking and team collaboration.",
+                "cta": "Do you need a system to organize teams or tasks in your business?",
+                "ctaButton": "Let`s talk about your project"
+            },
+            "evaDB": {
+                "title": "Eva DB - Institutional Management System",
+                "firstParagraph": "Eva DB is a comprehensive web-based management system developed for institutional environments. It allows authorized staff to manage users, internal records, and workflows from a centralized platform, improving organization, traceability, and internal communication.",
+                "secondParagraph": "The system was developed in collaboration with a public hospital, addressing real-world requirements such as access control, data integrity, and role-based permissions.",
+                "thirdParagraph": "Built with a scalable architecture and REST-based communication, the system can be adapted to different types of institutions or businesses with complex internal processes.",
+                "cta": "Do you need a custom internal system for your organization or institution?",
+                "ctaButton": "Discuss a custom system"
+            },
+            "xClone": {
+                "title": "X-Clone - Social Platform Prototype",
+                "firstParagraph": "X-Clone is an interactive web platform focused on user-generated content and real-time interaction. The application includes user authentication, profiles, content publishing, and dynamic updates, providing a solid foundation for social or community-driven platforms.",
+                "secondParagraph": "Built using the Laravel TALL stack, the system demonstrates how modern web applications can deliver fast, responsive user experiences without sacrificing maintainability.",
+                "thirdParagraph": "This type of platform can be adapted to communities, internal company networks, or custom social applications.",
+                "cta": "This architecture can be adapted to platforms that require user interaction and content publishing.",
+                "ctaButton": "Let's discuss your idea"
+            },
+            "profilePictureUploader": {
+                "title": "Profile Picture Uploader",
+                "firstParagraph": "Simple but strong application made to upload an image as your profile picture which then can be used or downloaded by other users. ",
+                "secondParagraph": "It's perhaps my most complete application yet. Includes Backend API in Laravel and Frontend in React. Implements Google OAuth, Sanctum Authentication with API tokens, Email sending, Query Caching with TanStack (React Query), Cloud Storage, and so on.",
+                "cta": "I can develop a system to store all your files in one click",
+                "ctaButton": "Let's build you that"
+            },
+            "portfolio": {
+                "title": "Personal Portfolio",
+                "firstParagraph": "My personal portfolio, a simple web page I built to showcase who I am, my skills, and my projects.",
+                "cta": "I can make your own personal or businnes portfolio too!",
+                "ctaButton": "Get in contact"
+            }
+        }
+    },
+    "about": {
+        "title": "Who am I?",
+        "description": "I'm a <highlight>Full-stack Web Developer focused on building custom web applications for real-world use.</highlight> I have hands-on experience developing full-stack systems, combining a strong technical background as an IT Technician with practical software development skills. I value clean interfaces, efficient systems, and maintainable code.",
+        "currently": "Currently",
+        "computerEngineering": "• <highlight>Studying Computer Engineering</highlight>, Studying Computer Engineering, strengthening my understanding of algorithms, systems, and software architecture to build more robust applications.",
+        "applying": "• <highlight>Applying my IT Technician background</highlight> to design and develop real-world full-stack solutions with attention to performance and reliability.",
+        "working": "• <highlight>Working with modern web technologies</highlight> such as Laravel and React, while focusing on clean code, usability, and long-term maintainability.",
+        "chips": {
+            "cleanCode": "Clean code",
+            "performance": "Performance",
+            "userFirst": "User-first design",
+            "maintainability": "Maintainability"
+        }
+    },
+    "stack": {
+        "title": "My <br /><highlight>tech stack</highlight>",
+        "tech": {
+            "frontend": {
+                "javascript": "Frontend language",
+                "typescript": "Superset language of JavaScript",
+                "react": "Frontend library/framework",
+                "tailwind": "CSS Framework"
+            },
+            "backend": {
+                "php": "Backend language",
+                "laravel": "Backend framework"
+            },
+            "ui": {
+                "figma": "UI design software",
+                "shadcn": "Frontend component library"
+            },
+            "databases": {
+                "mysql": "Relational database"
+            }
+        }
+    }
+}

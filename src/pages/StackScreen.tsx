@@ -1,38 +1,45 @@
 import TechChip from "@/components/ui/tech-chip";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Separator } from "@/components/ui/separator";
-import { SiReact, SiTypescript, SiJavascript, SiLaravel, SiTailwindcss, SiFigma, SiMysql, SiShadcnui, SiPhp, SiReactquery, } from "react-icons/si";
+import { SiReact, SiTypescript, SiJavascript, SiLaravel, SiTailwindcss, SiFigma, SiMysql, SiShadcnui, SiPhp, } from "react-icons/si";
 import { SlideIn } from "@/components/animations/slide-in";
+import { Trans, useTranslation } from "react-i18next";
 
 const tech = {
     frontend: [
-        { label: "React", icon: <SiReact />, tooltip: "Frontend library/framework" },
-        { label: "React Query", icon: <SiReactquery />, tooltip: "Caching library for React" },
-        { label: "TypeScript", icon: <SiTypescript />, tooltip: "Superset language of JavaScript"  },
-        { label: "JavaScript", icon: <SiJavascript />, tooltip: "Frontend languaje" },
-        { label: "Tailwind CSS", icon: <SiTailwindcss />, tooltip: "CSS framework" },
+        { label: "JavaScript", icon: <SiJavascript />, tooltipTranslationKey: "javascript" },
+        { label: "TypeScript", icon: <SiTypescript />, tooltipTranslationKey: "typescript" },
+        { label: "React", icon: <SiReact />, tooltipTranslationKey: "react" },
+        { label: "Tailwind CSS", icon: <SiTailwindcss />, tooltipTranslationKey: "tailwind" },
     ],
     backend: [
-        { label: "Laravel", icon: <SiLaravel />, tooltip: "Backend framework" },
-        { label: "PHP", icon: <SiPhp />, tooltip: "Backend language" },
+        { label: "PHP", icon: <SiPhp />, tooltipTranslationKey: "php" },
+        { label: "Laravel", icon: <SiLaravel />, tooltipTranslationKey: "laravel" },
     ],
     ui: [
-        { label: "shadcn/ui", icon: <SiShadcnui />, tooltip: "Frontend compontent library" },
-        { label: "Figma", icon: <SiFigma />, tooltip: "UI Design software" },
+        { label: "Figma", icon: <SiFigma />, tooltipTranslationKey: "figma" },
+        { label: "shadcn/ui", icon: <SiShadcnui />, tooltipTranslationKey: "shadcn" },
     ],
     databases: [
-        { label: "MySQL", icon: <SiMysql />, tooltip: "Relational Database" },
+        { label: "MySQL", icon: <SiMysql />, tooltipTranslationKey: "mysql" },
     ],
 }
 
 export default function StackScreen() {
+    const { t } = useTranslation();
+
     return (
         <div className="screen-container flex items-center justify-center">
             <div className="select-none px-4">
                 <SlideIn delay={0.1}>
                     <h1 className="text-4xl font-bold text-foreground">
-                        My <br />
-                        <span className="text-primary">tech stack</span>
+                        <Trans 
+                            i18nKey="stack.title"
+                            components={{
+                                br: <br />,
+                                highlight: <span className="text-primary" />
+                            }}
+                        />
                     </h1>
                 </SlideIn>
 
@@ -48,8 +55,8 @@ export default function StackScreen() {
                                 </h2>
                                 <FadeIn delay={0.2 * Object.keys(tech).indexOf(key)} y={100}>
                                     <ul className="flex flex-col gap-2">
-                                        { stack.map((t, i) => 
-                                            <TechChip key={i} label={t.label} icon={t.icon} tooltip={t.tooltip} />
+                                        { stack.map((tech, i) => 
+                                            <TechChip key={i} label={tech.label} icon={tech.icon} tooltip={ t(`stack.tech.${key}.${tech.tooltipTranslationKey}`) } />
                                         )}
                                     </ul>
                                 </FadeIn>

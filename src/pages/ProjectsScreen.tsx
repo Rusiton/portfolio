@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Modal from "@/components/ui/modal";
 import { useContactModal } from "@/providers/ContactModalProvider";
+import { useTranslation } from "react-i18next";
 
 import ProjectCard from "@/components/ui/project-card";
 import { Separator } from "@/components/ui/separator";
@@ -14,15 +15,16 @@ import CallToAction from "@/components/ui/call-to-action";
 
 type ProjectType = {
     id: number,
-    title: string,
-    img?: string,
-    firstParagraph: string,
-    secondParagraph: string,
-    thirdParagraph?: string,
-    embed?: string,
-    tags?: string[],
-    cta: string,
-    ctaButton: string,
+    translationKey: string,
+    title: boolean,
+    firstParagraph: boolean,
+    secondParagraph: boolean,
+    thirdParagraph: boolean,
+    img: boolean,
+    embed: string,
+    tags: string[],
+    cta: boolean,
+    ctaButton: boolean,
 }
 
 export default function ProjectsScreen() {
@@ -30,6 +32,8 @@ export default function ProjectsScreen() {
     const [displayedProject, setDisplayedProject] = useState<ProjectType | null>(null);
 
     const { setOpen } = useContactModal();
+
+    const { t } = useTranslation();
 
     const displayProjectInfo = (id: number) => {
         setOpenModal(true);
@@ -47,10 +51,10 @@ export default function ProjectsScreen() {
 
             <Modal open={openModal} close={() => setOpenModal(false)}>
                 { displayedProject && 
-                    <div className="w-full md:w-[500px] lg:w-[800px] max-h-[550px] overflow-y-auto">
+                    <div className="w-full pb-4 md:w-[500px] lg:w-[800px] max-h-[550px] overflow-y-auto">
                         { displayedProject.title &&                     
                             <h2 className="text-2xl font-bold">
-                                { displayedProject.title }
+                                { t(`projects.projects.${displayedProject.translationKey}.title`) }
                             </h2>
                         }
 
@@ -58,15 +62,15 @@ export default function ProjectsScreen() {
 
                         <div className="flex flex-col gap-4">
                             { displayedProject.firstParagraph &&
-                                <p className="text-sm">{ displayedProject.firstParagraph }</p>
+                                <p className="text-sm">{ t(`projects.projects.${displayedProject.translationKey}.firstParagraph`) }</p>
                             }
 
                             { displayedProject.secondParagraph &&
-                                <p className="text-sm">{ displayedProject.secondParagraph }</p>
+                                <p className="text-sm">{ t(`projects.projects.${displayedProject.translationKey}.secondParagraph`) }</p>
                             }
 
                             { displayedProject.thirdParagraph &&
-                                <p className="text-sm">{ displayedProject.thirdParagraph }</p>
+                                <p className="text-sm">{ t(`projects.projects.${displayedProject.translationKey}.thirdParagraph`) }</p>
                             }
 
                             { displayedProject.embed &&
@@ -90,22 +94,21 @@ export default function ProjectsScreen() {
                                     ) }
                                 </ul>
                             }
+
+                            <Separator className="my-4" />
                             
                             { displayedProject.cta &&
-                                <div className="mt-2">
-                                    <p className="w-full text-center font-bold underline underline-offset-2">
-                                        {displayedProject.cta}
+                                <div>
+                                    <p className="w-full text-center text-sm font-bold underline underline-offset-4">
+                                        { t(`projects.projects.${displayedProject.translationKey}.cta`) }
                                     </p>
                                     <div className="mt-4 w-full flex justify-center">
                                         <CallToAction
-                                            text={displayedProject.ctaButton}
+                                            text={ t(`projects.projects.${displayedProject.translationKey}.ctaButton`) }
                                             size="sm"
                                             callback={() => (setOpenModal(false), setOpen(true))}
                                         />
                                     </div>
-                                    <p className="mt-4 w-full text-center italic text-xs text-foreground-muted">
-                                        Tailored to your business needs
-                                    </p>
                                 </div>
                             }
                         </div>
@@ -116,7 +119,7 @@ export default function ProjectsScreen() {
             <FadeIn style="w-full md:w-2/3 lg:w-3/5">
                 <div className="card rounded-3xl p-10 bg-card select-none">
                     <h1 className="font-semibold text-xl">
-                        My Projects
+                        { t('projects.title') }
                     </h1>
 
                     <Separator className="mt-4 mb-8" />
@@ -129,7 +132,7 @@ export default function ProjectsScreen() {
                                 { projects.map((project) =>
                                     <CarouselItem key={project.id} className="basis-90">
                                         <ProjectCard 
-                                            project={project} 
+                                            project={project as ProjectType} 
                                             callback={() => displayProjectInfo(project.id)} 
                                         /> 
                                     </CarouselItem>
