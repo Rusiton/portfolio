@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
 import Layout from "@/pages/Layout";
 import HeaderScreen from "./pages/HeaderScreen";
@@ -10,14 +10,18 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />} >
+        <Route path="/" element={<Navigate to="/es" replace />} />
 
-          <Route path="/" element={<HeaderScreen />} />
-          <Route path="/projects" element={<ProjectsScreen />} />
-          <Route path="/about" element={<AboutScreen />} />
-          <Route path="/stack" element={<StackScreen />} />
+        <Route path="/:lang" element={<Layout />} >
+
+          <Route index element={<HeaderScreen />} />
+          <Route path="projects" element={<ProjectsScreen />} />
+          <Route path="about" element={<AboutScreen />} />
+          <Route path="stack" element={<StackScreen />} />
 
         </Route>
+
+        <Route path="*" element={<Navigate to="/es" replace />} />
       </Routes>
     </BrowserRouter>
   )
